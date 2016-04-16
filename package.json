@@ -1,0 +1,33 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "Недавно прошла конференция DUMP-2016 и для участников конференции мы придумали заковыристую задачу – создании карточной игры для тренировки памяти.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "./node_modules/.bin/wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danmir/webdev-tasks-6.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danmir/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/danmir/webdev-tasks-6#readme",
+  "dependencies": {
+    "gemini": "^3.0.2",
+    "gemini-sauce": "^1.0.0",
+    "sauce-connect": "^0.1.1",
+    "should": "^8.3.1",
+    "wdio-sync": "^0.4.9",
+    "webdriverio": "^4.0.5"
+  },
+  "devDependencies": {
+    "wdio-dot-reporter": "0.0.5",
+    "wdio-mocha-framework": "^0.2.12",
+    "wdio-sauce-service": "^0.2.2"
+  }
+}
