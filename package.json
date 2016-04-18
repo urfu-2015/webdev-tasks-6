@@ -1,0 +1,27 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "Tests for http://panicky-car.surge.sh/",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dodo888/webdev-tasks-6.git"
+  },
+  "author": "Vladimir Smirnov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dodo888/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/Dodo888/webdev-tasks-6#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chromedriver": "^2.21.2",
+    "mocha": "^2.4.5",
+    "wdio-dot-reporter": "0.0.5",
+    "wdio-mocha-framework": "^0.2.12",
+    "webdriverio": "^4.0.5"
+  }
+}
