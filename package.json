@@ -1,0 +1,19 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "./node_modules/.bin/wdio",
+    "test": "./node_modules/.bin/wdio saucelabs.conf.js",
+    "test1": "mocha --recursive webdriverio-test/"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "selenium-webdriver": "^2.53.1",
+    "wdio-mocha-framework": "^0.2.12",
+    "webdriverio": "^4.0.5"
+  }
+}
