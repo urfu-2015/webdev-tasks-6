@@ -1,0 +1,20 @@
+rootUrl: http://panicky-car.surge.sh/
+gridUrl: http://ondemand.saucelabs.com/wd/hub
+
+screenshotsDir: './screens'
+
+browsers:
+  firefox:
+    desiredCapabilities:
+      browserName: firefox
+
+  chrome:
+    desiredCapabilities:
+      browserName: chrome
+
+system:
+  plugins:
+    sauce:
+      noAutodetect: true
+      username: vvladimirova
+      accessKey: 6c624950-580d-4b06-aac2-e4ce20be8b3e

@@ -1,0 +1,24 @@
+{
+  "name": "cards",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "jscs .",
+    "start": "./node_modules/.bin/wdio",
+    "gemini-test": "./node_modules/.bin/gemini test gemini-test.js"
+  },
+  "dependencies": {
+    "jscs": "^2.2.1",
+    "gemini": "^3.0.2",
+    "gemini-sauce": "^1.0.0",
+    "sauce-connect": "^0.1.1",
+    "should": "^8.3.1",
+    "wdio-sync": "^0.4.9",
+    "webdriverio": "^4.0.5"
+  },
+  "devDependencies": {
+    "wdio-dot-reporter": "0.0.5",
+    "wdio-mocha-framework": "^0.2.12",
+    "wdio-sauce-service": "^0.2.2"
+  }
+}
