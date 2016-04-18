@@ -1,0 +1,4 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+node_modules
+selenium-server-standalone-2.53.0.jar
