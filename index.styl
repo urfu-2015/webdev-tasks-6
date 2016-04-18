@@ -1,0 +1,58 @@
+html,
+body
+{
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.memory-trainer__cards-container
+{
+    width: 500px;
+    height: 325px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.memory-trainer__card
+{
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-repeat: round;
+}
+
+.memory-trainer__card_suit_hearts
+{
+    background-image: url('../images/hearts.png');
+}
+
+.memory-trainer__card_suit_clubs
+{
+    background-image: url('../images/clubs.png');
+}
+
+.memory-trainer__card_suit_diamonds
+{
+    background-image: url('../images/diamonds.png');
+}
+
+.memory-trainer__card_hidden
+{
+    background-image: none;
+}
+
+
+for $state in 'init' '1' '2' '3' '4' '5' '6' 'hearts' 'clubs' 'diamonds' {
+    #memory-trainer__radio_state_{$state}:checked ~ .memory-trainer__cards-container_state_{$state}
+    {
+        display: flex;
+    }
+}
