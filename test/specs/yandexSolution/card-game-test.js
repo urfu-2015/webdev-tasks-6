@@ -23,7 +23,7 @@ describe('Card Game', function() {
         browser.element('footer a').getCssProperty('opacity').value.should.be.equal(0);
     });
 
-    it('should not show any card at the beginning', function(done) {
+    it('should not show any card at the beginning', function() {
         browser.url('http://panicky-car.surge.sh/');
 
         browser.waitUntilPseudoElementHidden('[for="c-0-0"]', ':before');
