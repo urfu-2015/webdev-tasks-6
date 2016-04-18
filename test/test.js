@@ -173,4 +173,16 @@ describe('test game', function (){
             .call(done)
     })
 
+    it('should show win message if all pairs are open', function (done) {
+        client
+            .url('http://panicky-car.surge.sh/')
+            .click('#heart')
+            .click('#club')
+            .click('#diamond')
+            .getCssProperty('footer a', 'opacity')
+            .then(function (result) {
+                expect(result.value).to.equal(1);
+            })
+            .call(done)
+    })
 });
