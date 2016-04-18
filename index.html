@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Memory Trainer</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div class="memory-trainer">
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_init" name="state" type="radio"
+                   checked>
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_1" name="state" type="radio">
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_2" name="state" type="radio">
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_3" name="state" type="radio">
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_4" name="state" type="radio">
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_5" name="state" type="radio">
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_6" name="state" type="radio">
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_hearts" name="state" type="radio">
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_clubs" name="state" type="radio">
+            <input class="memory-trainer__radio" id="memory-trainer__radio_state_diamonds" name="state" type="radio">
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_init">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_1"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_2"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_3"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_4"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_5"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_6"
+                ></label>
+            </div>
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_1">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_hearts"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+            </div>
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_2">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts  memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_clubs"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+            </div>
+
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_3">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts  memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_diamonds"
+                ></label>
+            </div>
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_4">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts  memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_clubs"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+            </div>
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_5">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts  memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_hearts"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+            </div>
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_6">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_diamonds"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_init"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds"
+                ></label>
+            </div>
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_hearts">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_hearts_2"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_hearts_3"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_hearts_4"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_hearts_6"
+                ></label>
+            </div>
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_clubs">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_clubs_1"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_clubs_3"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_clubs_5"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_clubs_6"
+                ></label>
+            </div>
+
+            <div class="memory-trainer__cards-container memory-trainer__cards-container_state_diamonds">
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_diamonds_1"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_diamonds_2"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_clubs memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_diamonds_4"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_hearts memory-trainer__card_hidden"
+                        for="memory-trainer__radio_state_diamonds_5"
+                ></label>
+                <label
+                        class="memory-trainer__card memory-trainer__card_suit_diamonds"
+                ></label>
+            </div>
+
+
+        </div>
+    </body>
+<html>

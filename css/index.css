@@ -1,0 +1,66 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.memory-trainer__cards-container {
+  width: 500px;
+  height: 325px;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.memory-trainer__card {
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgba(0,0,0,0.2);
+  background-repeat: round;
+}
+.memory-trainer__card_suit_hearts {
+  background-image: url("../images/hearts.png");
+}
+.memory-trainer__card_suit_clubs {
+  background-image: url("../images/clubs.png");
+}
+.memory-trainer__card_suit_diamonds {
+  background-image: url("../images/diamonds.png");
+}
+.memory-trainer__card_hidden {
+  background-image: none;
+}
+#memory-trainer__radio_state_init:checked ~ .memory-trainer__cards-container_state_init {
+  display: flex;
+}
+#memory-trainer__radio_state_1:checked ~ .memory-trainer__cards-container_state_1 {
+  display: flex;
+}
+#memory-trainer__radio_state_2:checked ~ .memory-trainer__cards-container_state_2 {
+  display: flex;
+}
+#memory-trainer__radio_state_3:checked ~ .memory-trainer__cards-container_state_3 {
+  display: flex;
+}
+#memory-trainer__radio_state_4:checked ~ .memory-trainer__cards-container_state_4 {
+  display: flex;
+}
+#memory-trainer__radio_state_5:checked ~ .memory-trainer__cards-container_state_5 {
+  display: flex;
+}
+#memory-trainer__radio_state_6:checked ~ .memory-trainer__cards-container_state_6 {
+  display: flex;
+}
+#memory-trainer__radio_state_hearts:checked ~ .memory-trainer__cards-container_state_hearts {
+  display: flex;
+}
+#memory-trainer__radio_state_clubs:checked ~ .memory-trainer__cards-container_state_clubs {
+  display: flex;
+}
+#memory-trainer__radio_state_diamonds:checked ~ .memory-trainer__cards-container_state_diamonds {
+  display: flex;
+}

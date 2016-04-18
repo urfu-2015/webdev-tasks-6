@@ -1,0 +1,33 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "Недавно прошла конференция DUMP-2016 и для участников конференции мы придумали\r заковыристую задачу – создании карточной игры для тренировки памяти.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env SAUCE_USERNAME=VasiliiKuznecov SAUCE_ACCESS_KEY=42247daf-53fb-439a-96ac-07f15abd26e3 npm run start:test",
+    "start:test": "wdio wdio.conf.js",
+    "stylus": "stylus index.styl --out ./css/index.css",
+    "watch": "stylus -w index.styl --out ./css/index.css",
+    "wdio:config": "wdio config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VasiliiKuznecov/webdev-tasks-6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VasiliiKuznecov/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/VasiliiKuznecov/webdev-tasks-6#readme",
+  "dependencies": {
+    "cross-env": "1.0.7",
+    "stylus": "0.54.2"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "wdio-dot-reporter": "0.0.5",
+    "wdio-mocha-framework": "0.2.12",
+    "webdriverio": "4.0.5"
+  }
+}
