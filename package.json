@@ -1,0 +1,8 @@
+{
+  "name": "webdev-tasks-6",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "webdriverio": "^4.0.5"
+  },
+  "devDependencies": {}
+}
