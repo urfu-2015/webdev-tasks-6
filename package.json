@@ -1,0 +1,16 @@
+{
+  "name": "webdev-task-6",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "wdio wdio.conf.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "4.4.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "wdio-mocha-framework": "^0.2.12",
+    "webdriverio": "^4.0.5"
+  }
+}
