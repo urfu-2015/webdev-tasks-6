@@ -1,0 +1,25 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "Недавно прошла конференция DUMP-2016 и для участников конференции мы придумали\r заковыристую задачу – создании карточной игры для тренировки памяти.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vedmax/webdev-tasks-6.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vedmax/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/Vedmax/webdev-tasks-6#readme",
+  "devDependencies": {
+    "wdio-mocha-framework": "^0.2.12"
+  }
+}
