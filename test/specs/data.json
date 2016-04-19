@@ -1,0 +1,46 @@
+{
+  "url": "http://panicky-car.surge.sh/",
+  "firstTest": {
+    "card": "[for=\"c-0-0\"]"
+  },
+  "secondTest": {
+    "firstCard": "[for=\"c-0-0\"]",
+    "secondCard": "[for=\"c-1-1\"]",
+    "visibleCard": "[for=\"c-0-0\"]",
+    "invisibleCard": "[for=\"c-0-4\"]"
+  },
+  "thirdTest": {
+    "firstCard": "[for=\"c-0-0\"]",
+    "secondCard": "[for=\"heart\"]",
+    "firstVisibleCard": "[for=\"c-0-0\"]",
+    "secondVisibleCard": "[for=\"c-0-4\"]"
+  },
+  "fourthTest": {
+    "firstCard": "[for=\"c-0-0\"]",
+    "secondCard": "[for=\"heart\"]",
+    "thirdCard": "[for=\"c-0-1\"]",
+    "fourthCard": "[for=\"c-2-2\"]",
+    "firstVisibleCard": "[for=\"c-0-0\"]",
+    "secondVisibleCard": "[for=\"c-0-4\"]",
+    "invisibleCard": "[for=\"c-2-2\"]"
+  },
+  "fifthTest": {
+    "firstCard": "[for=\"c-0-0\"]",
+    "secondCard": "[for=\"heart\"]",
+    "thirdCard": "[for=\"c-0-1\"]",
+    "fourthCard": "[for=\"club\"]",
+    "firstVisibleCard": "[for=\"c-0-0\"]",
+    "secondVisibleCard": "[for=\"c-0-4\"]",
+    "thirdVisibleCard": "[for=\"c-0-1\"]",
+    "fourthVisibleCard": "[for=\"c-0-3\"]"
+  },
+  "sixthTest": {
+    "firstCard": "[for=\"c-0-0\"]",
+    "secondCard": "[for=\"heart\"]",
+    "thirdCard": "[for=\"c-0-1\"]",
+    "fourthCard": "[for=\"club\"]",
+    "fifthCard": "[for=\"c-0-2\"]",
+    "sixthCard": "[for=\"diamond\"]",
+    "visibleElement": "<a>"
+  }
+}
