@@ -48,6 +48,8 @@ exports.config = {
         browserName: 'firefox'
     },{
         browserName: 'internet explorer'
+    }, {
+        browserName: 'chrome'
     }],
     //
     // ===================

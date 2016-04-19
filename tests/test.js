@@ -62,7 +62,7 @@ describe('Yandex.Cards test', function() {
         //выбрали 1-ую
         browser.click('[for="c-0-0"]');
         //выбрали 3-ю, что неверно, закрыли все карты
-        browser.click('[for="c-0-3"]');
+        browser.click('[for="c-1-3"]');
         assert.isNotOk(browser.element('section.heart > .card.heart').isVisible());
         assert.isNotOk(browser.element('section.diamond > .card.heart').isVisible());
         assert.isNotOk(browser.element('section.club > .card.heart').isVisible());
@@ -81,7 +81,7 @@ describe('Yandex.Cards test', function() {
         browser.click('[for="club"]');
         browser.click('[for="c-0-0"]');
         assert.isOk(browser.element('section.heart > .card.heart').isVisible());
-        browser.click('[for="c-0-4"]');
+        browser.click('[for="c-1-5"]');
         assert.isNotOk(browser.element('section.heart > .card.heart').isVisible());
     });
 
@@ -96,5 +96,6 @@ describe('Yandex.Cards test', function() {
         assert.isOk(browser.element('#club').getAttribute('checked'));
         assert.isOk(browser.element('#heart').getAttribute('checked'));
         assert.isOk(browser.element('#diamond').getAttribute('checked'));
+        assert.equal(browser.element('footer > a').getCssProperty('opacity').value, 1);
     })
 });
