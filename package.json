@@ -1,0 +1,11 @@
+{
+  "name": "webdev-tasks-6",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "webdriverio": "^4.0.5"
+  },
+  "devDependencies": {
+    "wdio-mocha-framework": "^0.2.12"
+  }
+}
