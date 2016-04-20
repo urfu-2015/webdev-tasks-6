@@ -9,47 +9,25 @@ describe('yandex cards', () => {
         beforeEach(() => {
             browser.url(url);
         });
-        it('should check first card to be hidden', () => {
-            var card = browser.element('[for="c-0-0"]');
-            var visibility = card.getCssProperty('visibility').value;
-            var opacity = card.getCssProperty('opacity').value;
-            expect(visibility).to.be.equal('hidden');
-            expect(opacity).to.be.equal(0);
+        it('should check visibility of the sections', () => {
+            var startSection = browser.element('section:first-child');
+            var visibility = startSection.getCssProperty('visibility').value;
+            expect(visibility).to.be.equal('visible');
+            for (var i = 2; i < 6; i++) {
+                var section = browser.element('section:nth-child(' + i + ')');
+                visibility = section.getCssProperty('visibility').value;
+                expect(visibility).to.be.equal('hidden');
+            }
         });
-        it('should check second card to be hidden', () => {
-            var card = browser.element('[for="c-0-1"]');
-            var visibility = card.getCssProperty('visibility').value;
-            var opacity = card.getCssProperty('opacity').value;
-            expect(visibility).to.be.equal('hidden');
-            expect(opacity).to.be.equal(0);
-        });
-        it('should check third card to be hidden', () => {
-            var card = browser.element('[for="c-0-2"]');
-            var visibility = card.getCssProperty('visibility').value;
-            var opacity = card.getCssProperty('opacity').value;
-            expect(visibility).to.be.equal('hidden');
-            expect(opacity).to.be.equal(0);
-        });
-        it('should check fourth card to be hidden', () => {
-            var card = browser.element('[for="c-0-3"]');
-            var visibility = card.getCssProperty('visibility').value;
-            var opacity = card.getCssProperty('opacity').value;
-            expect(visibility).to.be.equal('hidden');
-            expect(opacity).to.be.equal(0);
-        });
-        it('should check fifth card to be hidden', () => {
-            var card = browser.element('[for="c-0-4"]');
-            var visibility = card.getCssProperty('visibility').value;
-            var opacity = card.getCssProperty('opacity').value;
-            expect(visibility).to.be.equal('hidden');
-            expect(opacity).to.be.equal(0);
-        });
-        it('should check sixth card to be hidden', () => {
-            var card = browser.element('[for="c-0-5"]');
-            var visibility = card.getCssProperty('visibility').value;
-            var opacity = card.getCssProperty('opacity').value;
-            expect(visibility).to.be.equal('hidden');
-            expect(opacity).to.be.equal(0);
+        it('should check opacity of the sections', () => {
+            expect(browser.element('section:first-child').getCssProperty('opacity').value).to.be.equal(1);
+            for (var i = 2; i < 6; i++) {
+                var opacity = browser
+                              .element('section:nth-child(' + i + ')')
+                              .getCssProperty('opacity').value;
+                //0 <= opacity < 1
+                expect(opacity).to.be.at.least(0);
+            }
         });
     });
 
@@ -58,57 +36,25 @@ describe('yandex cards', () => {
             browser.url(url);
         });
         it('should show hidden card on click', () => {
-            var selector = '[for="c-0-0"]';
-            var card = browser.element(selector);
-            var visibility = card.getCssProperty('visibility').value;
-            var opacity = card.getCssProperty('opacity').value;
-            browser.click(selector);
-            expect(visibility).to.be.equal('visible');
-            expect(opacity).to.be.equal(1);
+            //var selector = '[for="c-1-0"]';
+            var selector = 'section:nth-child(2)';
+            var beforeVisibility = browser.element(selector).getCssProperty('visibility').value;
+            expect(beforeVisibility).to.be.equal('hidden');
+            browser.click('[for="c-0-0"]');
+            var afterVisibility = browser.element(selector).getCssProperty('visibility').value;
+            expect(afterVisibility).to.be.equal('visible');
         });
         it('should hide 2 different cards', () => {
-            var firstSelector = '[for="c-0-0"]';
-            var secondSelector = '[for="c-1-2"]';
-            var firstCard = browser.element(firstSelector);
-            var secondCard = browser.element(secondSelector);
-
-            browser.click(firstSelector);
-            var firstCardVisibility = firstCard.getCssProperty('visibility').value;
-            var firstCardOpacity = firstCard.getCssProperty('opacity').value;
-            expect(firstCardVisibility).to.be.equal('visible');
-            expect(firstCardOpacity).to.be.equal(1);
-
-            browser.click(secondSelector);
-            firstCardVisibility = firstCard.getCssProperty('visibility').value;
-            firstCardOpacity = firstCard.getCssProperty('opacity').value;
-            var secondCardVisibility = secondCard.getCssProperty('visibility').value;
-            var secondCardOpacity = firstCard.getCssProperty('opacity').value;
-            expect(firstCardVisibility).to.be.equal('hidden');
-            expect(secondCardVisibility).to.be.equal('hidden');
-            expect(firstCardOpacity).to.be.equal(0);
-            expect(secondCardOpacity).to.be.equal(0);
+            var selector = '[for="c-1-3"]';
+            browser.click('[for="c-0-0"]');
+            expect(browser.element(selector).getCssProperty('visibility').value).to.be.equal('visible');
+            browser.click('[for="c-1-3"]');
+            expect(browser.element(selector).getCssProperty('visibility').value).to.be.equal('hidden');
         });
         it('should show 2 same cards', () => {
-            var firstSelector = '[for="c-0-0"]';
-            var secondSelector = '[for="c-1-4"]';
-            var firstCard = browser.element(firstSelector);
-            var secondCard = browser.element(secondSelector);
-
-            browser.click(firstSelector);
-            var firstCardVisibility = firstCard.getCssProperty('visibility').value;
-            var firstCardOpacity = firstCard.getCssProperty('opacity').value;
-            expect(firstCardVisibility).to.be.equal('visible');
-            expect(firstCardOpacity).to.be.equal(1);
-
-            browser.click(secondSelector);
-            firstCardVisibility = firstCard.getCssProperty('visibility').value;
-            firstCardOpacity = firstCard.getCssProperty('opacity').value;
-            var secondCardVisibility = secondCard.getCssProperty('visibility').value;
-            var secondCardOpacity = firstCard.getCssProperty('opacity').value;
-            expect(firstCardVisibility).to.be.equal('visible');
-            expect(secondCardVisibility).to.be.equal('visible');
-            expect(firstCardOpacity).to.be.equal(1);
-            expect(secondCardOpacity).to.be.equal(1);
+            browser.click('[for="c-0-1"]');
+            browser.click('[for="club"]');
+            expect(browser.element('#club').getAttribute('checked')).to.be.equal('true');
         });
     });
 
@@ -117,68 +63,30 @@ describe('yandex cards', () => {
             browser.url(url);
         });
         it('should keep first pair of cards visible and hide next pair of diff cards', () => {
-            browser.click('[for="heart"]');
-            var firstSelector = '[for="c-0-2"]';
-            var secondSelector = '[for="c-3-3"]';
-            var firstCard = browser.element(firstSelector);
-            var secondCard = browser.element(secondSelector);
-
-            browser.click(firstSelector);
-            var firstCardVisibility = firstCard.getCssProperty('visibility').value;
-            var firstCardOpacity = firstCard.getCssProperty('opacity').value;
-            expect(firstCardVisibility).to.be.equal('visible');
-            expect(firstCardOpacity).to.be.equal(1);
-
-            browser.click(secondSelector);
-            firstCardVisibility = firstCard.getCssProperty('visibility').value;
-            firstCardOpacity = firstCard.getCssProperty('opacity').value;
-            var secondCardVisibility = secondCard.getCssProperty('visibility').value;
-            var secondCardOpacity = firstCard.getCssProperty('opacity').value;
-            expect(firstCardVisibility).to.be.equal('hidden');
-            expect(secondCardVisibility).to.be.equal('hidden');
-            expect(firstCardOpacity).to.be.equal(0);
-            expect(secondCardOpacity).to.be.equal(0);
+            var selector = 'section:nth-child(5)';
+            browser.click('#heart');
+            browser.click('[for="c-0-3"]');
+            expect(browser.element(selector).getCssProperty('visibility').value).to.be.equal('visible');
+            browser.click('[for="c-4-2"]');
+            expect(browser.element(selector).getCssProperty('visibility').value).to.be.equal('hidden');
         });
         it('should keep both pairs of cards visible if next pair is correct', () => {
-            browser.click('[for="heart"]');
-            var firstSelector = '[for="c-0-2"]';
-            var secondSelector = '[for="c-3-4"]';
-            var firstCard = browser.element(firstSelector);
-            var secondCard = browser.element(secondSelector);
-
-            browser.click(firstSelector);
-            var firstCardVisibility = firstCard.getCssProperty('visibility').value;
-            var firstCardOpacity = firstCard.getCssProperty('opacity').value;
-            expect(firstCardVisibility).to.be.equal('visible');
-            expect(firstCardOpacity).to.be.equal(1);
-
-            browser.click(secondSelector);
-            firstCardVisibility = firstCard.getCssProperty('visibility').value;
-            firstCardOpacity = firstCard.getCssProperty('opacity').value;
-            var secondCardVisibility = secondCard.getCssProperty('visibility').value;
-            var secondCardOpacity = firstCard.getCssProperty('opacity').value;
-            expect(firstCardVisibility).to.be.equal('visible');
-            expect(secondCardVisibility).to.be.equal('visible');
-            expect(firstCardOpacity).to.be.equal(1);
-            expect(secondCardOpacity).to.be.equal(1);
+            browser.click('#heart');
+            browser.click('[for="c-0-3"]');
+            browser.click('[for="c-4-2"]');
+            expect(browser.element('#club').getAttribute('checked')).to.be.equal('true');
         });
     });
 
     describe('visibility after clicking on all cards', () => {
-        beforeEach(() => {
-            browser.url(url);
-        });
         it('should show win message', () => {
-            var winMessage = browser.element('<a>');
-            var winMessageOpacity = winMessage.getCssProperty('opacity').value;
-            expect(winMessageOpacity).to.be.equal(1);
-
-            browser.click('[for="heart"]');
-            browser.click('[for="diamond"]');
-            browser.click('[for="club"]');
-
-            winMessageOpacity = winMessage.getCssProperty('opacity').value;
-            expect(winMessageOpacity).to.be.equal(1);
+            browser.url(url);
+            var selector = 'footer a';
+            expect(browser.element(selector).getCssProperty('opacity').value).to.be.at.least(0);
+            browser.click('#heart');
+            browser.click('#club');
+            browser.click('#diamond');
+            expect(browser.element(selector).getCssProperty('opacity').value).to.be.equal(1);
         });
     });
 });

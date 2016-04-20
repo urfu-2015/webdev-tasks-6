@@ -1,18 +1,6 @@
 exports.config = {
     
     //
-    // =================
-    // Service Providers
-    // =================
-    // WebdriverIO supports Sauce Labs, Browserstack, and Testing Bot (other cloud providers
-    // should work too though). These services define specific user and key (or access key)
-    // values you need to put in here in order to connect to these services.
-    //
-    user: process.env.katonuf,
-    key: process.env.36bd05d1-df5b-4b45-a762-c5ce9172ff5b,
-    
-    
-    //
     // ==================
     // Specify Test Files
     // ==================
@@ -59,7 +47,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'silent',
+    logLevel: 'verbose',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -103,7 +91,8 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],//
+    //services: ['sauce'],
+    //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: http://webdriver.io/guide/testrunner/frameworks.html
@@ -115,7 +104,8 @@ exports.config = {
     // Test reporter for stdout.
     // The following are supported: dot (default), spec, and xunit
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    // reporters: ['dot'],
+    reporters: ['dot'],
+    
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
