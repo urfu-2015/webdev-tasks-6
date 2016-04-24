@@ -2,6 +2,7 @@
 
 const webdriverio = require('webdriverio');
 const expect = require('chai').expect;
+const chaiAsPromised = require('chai-as-promised');
 const url = 'http://panicky-car.surge.sh/';
 
 describe('Yandex.Cards', () => {
@@ -10,37 +11,37 @@ describe('Yandex.Cards', () => {
     it('all cards should be invisible', () => {
         let cards = [];
         for (let i = 0; i < 6; i++) {
-            cards.push(browser.element('[for="c-' + (i + 1) + '-' + i + '"]'));
+            cards.push('[for="c-' + (i + 1) + '-' + i + '"]');
         }
+
         for (let i = 0; i < cards.length; i++) {
-            expect(cards[i].getCssProperty('visibility').value).to.be.equal('hidden');
+            expect(browser.isVisible(cards[i])).to.be.false;
         }
     });
 
-    it('should show clicked card', () => {
+    it('should show clicked card', done => {
         browser.click('[for="c-0-0"]');
-        let visibileElement = browser.element('[for="c-1-0"]');
-        expect(visibileElement.getCssProperty('visibility').value).to.be.equal('visible');
+        browser.pause(1500);
+
+        expect(browser.isVisible('[for="c-1-0"]')).to.be.true;
     });
 
-    it('should not show different cards after some time', () => {
+    it('should not show different cards after some time', done => {
         browser.click('[for="c-0-0"]');
         browser.click('[for="c-1-1"]');
         browser.pause(1500);
-        let hiddenElement1 = browser.element('[for="c-1-0"]');
-        let hiddenElement2 = browser.element('[for="c-2-1"]');
-        expect(hiddenElement1.getCssProperty('visibility').value).to.be.equal('hidden');
-        expect(hiddenElement2.getCssProperty('visibility').value).to.be.equal('hidden');
+
+        expect(browser.isVisible('[for="c-1-0"]')).to.be.false;
+        expect(browser.isVisible('[for="c-2-1"]')).to.be.false;
     });
 
     it('should show same cards after some time', () => {
         browser.click('[for="c-0-0"]');
         browser.click('[for="heart"]');
         browser.pause(1500);
-        let visibileElement1 = browser.element('[for="c-0-0"]');
-        let visibileElement2 = browser.element('[for="c-0-4"]');
-        expect(visibileElement1.getCssProperty('visibility').value).to.be.equal('visible');
-        expect(visibileElement2.getCssProperty('visibility').value).to.be.equal('visible');
+
+        expect(browser.isVisible('[for="c-0-0"]')).to.be.true;
+        expect(browser.isVisible('[for="c-0-4"]')).to.be.true;
     });
 
     it('should show two correct pair cards', () => {
@@ -50,10 +51,8 @@ describe('Yandex.Cards', () => {
         browser.click('[for="diamond"]');
         browser.pause(1500);
 
-        let visibileElement1 = browser.element('[for="c-0-0"]');
-        let visibileElement2 = browser.element('[for="c-0-2"]');
-        expect(visibileElement1.getCssProperty('visibility').value).to.be.equal('visible');
-        expect(visibileElement2.getCssProperty('visibility').value).to.be.equal('visible');
+        expect(browser.isVisible('[for="c-0-0"]')).to.be.true;
+        expect(browser.isVisible('[for="c-0-2"]')).to.be.true;
     });
 
     it('should show win card if all cards right', () => {
@@ -64,8 +63,7 @@ describe('Yandex.Cards', () => {
         browser.click('[for="c-0-1"]');
         browser.click('[for="club"]');
 
-        let winElement = browser.element('a');
-        expect(winElement.getCssProperty('opacity').value).to.be.equal(1);
+        expect(browser.isVisibleWithinViewport('a')).to.be.true;
     });
 
     it('should start new game after click win card', () => {
@@ -77,16 +75,16 @@ describe('Yandex.Cards', () => {
         browser.click('[for="club"]');
 
         browser.click('a');
-        browser.pause(5000);
-        let winElement = browser.element('a');
-        expect(winElement.getCssProperty('opacity').value).to.be.equal(0);
+        browser.pause(3000);
+
+        expect(browser.isVisibleWithinViewport('a')).to.be.false;
 
         let cards = [];
         for (let i = 0; i < 6; i++) {
-            cards.push(browser.element('[for="c-' + (i + 1) + '-' + i + '"]'));
+            cards.push('[for="c-' + (i + 1) + '-' + i + '"]');
         }
         for (let i = 0; i < cards.length; i++) {
-            expect(cards[i].getCssProperty('visibility').value).to.be.equal('hidden');
+            expect(browser.isVisible(cards[i])).to.be.false;
         }
     });
 });
