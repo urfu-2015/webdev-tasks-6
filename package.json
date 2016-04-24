@@ -1,0 +1,26 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "Недавно прошла конференция DUMP-2016 и для участников конференции мы придумали\r заковыристую задачу – создании карточной игры для тренировки памяти.",
+  "main": "soucelabs.conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v-samoylov/webdev-tasks-6.git"
+  },
+  "author": "v-samoylov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/v-samoylov/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/v-samoylov/webdev-tasks-6#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "webdriverio": "^4.0.5"
+  }
+}
