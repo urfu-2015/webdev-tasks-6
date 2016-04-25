@@ -1,0 +1,7 @@
+/node_modules
+/errorShots
+npm-debug.log
+index.css
+index.html
+index.styl
+/images
