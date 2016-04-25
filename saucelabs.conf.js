@@ -33,7 +33,7 @@ exports.config = {
     // from the same test should run tests.
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'firefox'
     }],
     //
     // ===================
@@ -60,7 +60,7 @@ exports.config = {
     baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 1000000000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
@@ -172,15 +172,7 @@ exports.config = {
     // onComplete: function(exitCode) {
     // }
     host: 'ondemand.saucelabs.com',
-    //host: 'http://localhost',
-    //port: 63342,
-    //path: '/webdev-tasks-6/index.html',
     user: 'tester228',
-    key: 'fc3f4ce7-3d52-482d-ad7e-d92cc2557f33'
+    key: 'fc3f4ce7-3d52-482d-ad7e-d92cc2557f33',
+    timeout: 100000000
 };
-
-
-
-//module.exports.config = {
-//    host: 'ondemand.saucelabs.com',
-//};

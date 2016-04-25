@@ -109,7 +109,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd'
-    },
+    }
     //
     // =====
     // Hooks
@@ -171,4 +171,4 @@ exports.config = {
     // possible to defer the end of the process using a promise.
     // onComplete: function(exitCode) {
     // }
-}
+};

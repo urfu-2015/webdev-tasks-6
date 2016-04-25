@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "wdio": "./node_modules/.bin/wdio",
-    "test": "./node_modules/.bin/wdio saucelabs.conf.js",
-    "test1": "mocha --recursive webdriverio-test/"
+    "test": "wdio saucelabs.conf.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^3.5.0",
     "mocha": "^2.4.5",
-    "selenium-webdriver": "^2.53.1",
+    "should": "^8.3.1",
     "wdio-mocha-framework": "^0.2.12",
     "webdriverio": "^4.0.5"
   }
