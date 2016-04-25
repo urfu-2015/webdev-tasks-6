@@ -34,14 +34,6 @@ describe('panicky-car', function () {
         browser.url('http://panicky-car.surge.sh/');
         browser.waitForVisible('body');
     });
-    var blacklist = new Set();
-    blacklist.add(1 + "," + 4);
-    blacklist.add(2 + "," + 3);
-    blacklist.add(3 + "," + 5);
-    blacklist.add(4 + "," + 1);
-    blacklist.add(5 + "," + 0);
-    blacklist.add(6 + "," + 2);
-
 
     it('should not show cards at start part1', function () {
         for (let j = 0; j < 6; j++) {
