@@ -1,0 +1,26 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "Tests for Yandex.Cards",
+  "main": "test.js",
+  "dependencies": {
+    "webdriverio": "^4.0.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "wdio-mocha-framework": "^0.2.12"
+  },
+  "scripts": {
+    "test": "wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/air-breathing/webdev-tasks-6.git"
+  },
+  "author": "Nadya Grin (air_breathing)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/air-breathing/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/air-breathing/webdev-tasks-6#readme"
+}
