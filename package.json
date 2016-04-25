@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "node_modules/.bin/wdio wdio.conf.js"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "wdio-mocha-framework": "^0.2.12",
+    "wdio-sync": "^0.4.9",
+    "webdriverio": "^4.0.5"
+  }
+}
