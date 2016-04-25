@@ -52,6 +52,9 @@ exports.config = {
             browserName: 'Chrome'
         }
     ],
+    //host: 'ondemand.saucelabs.com:80/wd/hub',
+    //host: 'localhost',
+    //port: '5555',
     //
     // ===================
     // Test Configurations
