@@ -6,17 +6,18 @@ describe('Yandex.Cards test', function() {
         global.allCards = ['heart', 'diamond', 'club'];
     });
 
-    it('labels with empty image should be hidden', function () {
+    beforeEach(function (){
         browser.url('http://panicky-car.surge.sh');
-        //done, на удивление, не требуется
+    });
+
+    it('labels with empty image should be hidden', function () {
         allCards.forEach(function (elem) {
             assert.isOk(browser.element('section:not([class]) > .card.' + elem).isVisible());
         });
     });
 
     it('cards should be hidden in heart section', function () {
-        allCards.forEach(
-            function(labelClass) {
+        allCards.forEach(function(labelClass) {
                 assert.isNotOk(browser.element('section.heart > .card.' + labelClass).isVisible());
             }
         )
@@ -39,7 +40,6 @@ describe('Yandex.Cards test', function() {
     });
 
     it('should make visible only heart in section heart', function () {
-        browser.url('http://panicky-car.surge.sh');
         //выбираем самую первую карточку
         browser.click('[for="c-0-0"]');
         assert.isOk(browser.element('section.heart > .card.heart').isVisible());
@@ -49,7 +49,6 @@ describe('Yandex.Cards test', function() {
 
 
     it('should make visible only diamond in section diamond', function () {
-        browser.url('http://panicky-car.surge.sh');
         //выбираем самую первую карточку
         browser.click('[for="c-0-2"]');
         assert.isNotOk(browser.element('section.heart > .card.diamond').isVisible());
@@ -58,7 +57,6 @@ describe('Yandex.Cards test', function() {
     });
 
     it('should hidden all cards', function () {
-        browser.url('http://panicky-car.surge.sh');
         //выбрали 1-ую
         browser.click('[for="c-0-0"]');
         //выбрали 3-ю, что неверно, закрыли все карты
@@ -69,14 +67,17 @@ describe('Yandex.Cards test', function() {
     });
 
     it('should open two cards', function () {
-        browser.url('http://panicky-car.surge.sh');
         browser.click('[for="c-0-1"]');
         browser.click('[for="club"]');
+        //когда 2 карты открыты, то отображение передается section без классов,
+        // а точнее регулируется в opacity label.club:before, но данный селектор не принимает element
+        assert.isNotOk(browser.element('section.club > .card.club').isVisible());
+        assert.isNotOk(browser.element('section.club > .card.heart').isVisible());
+        assert.isNotOk(browser.element('section.club > .card.diamond').isVisible());
         assert.isOk(browser.element('#club').getAttribute('checked'));
     });
 
     it('should close only one card', function () {
-        browser.url('http://panicky-car.surge.sh');
         browser.click('[for="c-0-1"]');
         browser.click('[for="club"]');
         browser.click('[for="c-0-0"]');
@@ -86,7 +87,6 @@ describe('Yandex.Cards test', function() {
     });
 
     it('it should winner', function () {
-        browser.url('http://panicky-car.surge.sh');
         browser.click('[for="c-0-1"]');
         browser.click('[for="club"]');
         browser.click('[for="c-0-0"]');
