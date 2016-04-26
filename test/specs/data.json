@@ -1,0 +1,46 @@
+{
+  "url": "http://panicky-car.surge.sh/",
+  "firstTest": {
+    "card": "section:first-Child .heart:first-Child"
+  },
+  "secondTest": {
+    "firstCard": "section:first-Child .heart:first-Child",
+    "secondCard": "section:nth-Child(2) .club:first-Child",
+    "visibleCard": "section:first-Child .heart:first-Child",
+    "invisibleCard": "section:first-Child .heart:nth-Child(2)"
+  },
+  "thirdTest": {
+    "firstCard": "section:first-Child .heart:first-Child",
+    "secondCard": "section:nth-Child(2) .heart:nth-Child(2)",
+    "firstVisibleCard": "section:first-Child .heart:first-Child",
+    "secondVisibleCard": "section:first-Child .heart:nth-Child(2)"
+  },
+  "fourthTest": {
+    "firstCard": "section:first-Child .heart:first-Child",
+    "secondCard": "section:nth-Child(2) .heart:nth-Child(2)",
+    "thirdCard": "section:first-Child .club:first-Child",
+    "fourthCard": "section:nth-Child(3) .diamond:first-Child",
+    "firstVisibleCard": "section:first-Child .heart:first-Child",
+    "secondVisibleCard": "section:first-Child .heart:nth-Child(2)",
+    "invisibleCard": "section:nth-Child(3) .diamond:first-Child"
+  },
+  "fifthTest": {
+    "firstCard": "section:first-Child .heart:first-Child",
+    "secondCard": "section:nth-Child(2) .heart:nth-Child(2)",
+    "thirdCard": "section:first-Child .club:first-Child",
+    "fourthCard": "section:nth-Child(3) .club:nth-Child(2)",
+    "firstVisibleCard": "section:first-Child .heart:first-Child",
+    "secondVisibleCard": "section:first-Child .heart:nth-Child(2)",
+    "thirdVisibleCard": "section:first-Child .club:first-Child",
+    "fourthVisibleCard": "section:first-Child .club:nth-Child(2)"
+  },
+  "sixthTest": {
+    "firstCard": "section:first-Child .heart:first-Child",
+    "secondCard": "section:nth-Child(2) .heart:nth-Child(2)",
+    "thirdCard": "section:first-Child .club:first-Child",
+    "fourthCard": "section:nth-Child(3) .club:nth-Child(2)",
+    "fifthCard": "section:first-Child .diamond:first-Child",
+    "sixthCard": "section:nth-Child(4) .diamond:nth-Child(2)",
+    "visibleElement": "<a>"
+  }
+}
