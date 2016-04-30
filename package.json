@@ -1,0 +1,31 @@
+{
+  "name": "testkoval",
+  "version": "1.0.0",
+  "description": "Недавно прошла конференция DUMP-2016 и для участников конференции мы придумали\r заковыристую задачу – создании карточной игры для тренировки памяти.",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "wdio-mocha-framework": "^0.2.12",
+    "wdio-sauce-service": "^0.2.2",
+    "webdriverio": "^4.0.5"
+  },
+  "scripts": {
+    "test": ".\\node_modules\\.bin\\wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolinaKoval/webdev-tasks-6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolinaKoval/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/PolinaKoval/webdev-tasks-6#readme",
+  "devDependencies": {
+    "wdio-mocha-framework": "^0.2.12"
+  }
+}
