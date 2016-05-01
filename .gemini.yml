@@ -1,0 +1,20 @@
+rootUrl: http://panicky-car.surge.sh
+gridUrl: http://ondemand.saucelabs.com/wd/hub
+
+browsers:
+  chrome-latest:
+    desiredCapabilities:
+      version: "37.0"
+      browserName: chrome
+      platform: LINUX
+  firefox-latest:
+    desiredCapabilities:
+      version: "31.0"
+      browserName: firefox
+      platform: LINUX
+
+system:
+  debug: true
+#  plugins:
+#    sauce:
+#      noAutodetect: true
