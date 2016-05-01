@@ -28,3 +28,14 @@ gemini.suite('Right pairs', function(suite) {
             actions.click('[for="diamond"]');
         });
 });
+
+gemini.suite('Wrong pairs', function(suite) {
+    suite.setUrl('/')
+        .setCaptureElements('main section:first-child')
+        .capture('clicked first heart', (actions, find) => {
+            actions.click('[for="c-0-0"]');
+        })
+        .capture('clicked second club', (actions, find) => {
+            actions.click('[for="c-1-1"]');
+        })
+});

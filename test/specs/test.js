@@ -19,7 +19,7 @@ describe('Яндекс Карты', function() {
 
     // Выбираем произвольную карту и проверяем, что ее видно
     it('should be visible card', function () {
-        // Выбор произвольной карты
+        // Выбор псевдослучайной карты
         browser.click(firstClubCardSelector);
 
         // Проверяем, что ее видно
@@ -43,14 +43,15 @@ describe('Яндекс Карты', function() {
         assert.equal(winElem.getCssProperty('opacity').value, 1);
     });
 
-    // Выбираем две карты из начального состояния
+    // Выбираем две несовпадающих карты из начального состояния
     it('should return to init state after wrong cards', function () {
+        var secondCardSelector = '[for="c-1-1"]';
         browser.click(firstHeartCardSelector);
-        browser.click('[for="c-1-1"]'); // выбираем вторую карту ♣︎
+        browser.click(secondCardSelector); // выбираем вторую карту ♣︎
 
         // Проверяем, что вернулись в начальное состояние
         // Т.е вторая карта спрятана
-        var clubCard = browser.element('[for="c-1-1"]');
+        var clubCard = browser.element(secondCardSelector);
         var clubCardVisibility = clubCard.getCssProperty('visibility');
         //console.log(clubCardVisibility);
         assert.equal(clubCardVisibility.value, 'hidden');
@@ -58,8 +59,6 @@ describe('Яндекс Карты', function() {
 
     // Выбираем еще две карты при правильно выбранных двух
     it('should return to two checked cards', function () {
-        browser.url('http://panicky-car.surge.sh/');
-
         // Выбор двух правильных карт
         browser.click(firstHeartCardSelector);
         browser.click(secondHeartCardSelector);
