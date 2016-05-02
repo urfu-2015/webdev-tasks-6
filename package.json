@@ -1,0 +1,32 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "webdev yandex task",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/.bin/wdio wdio.conf.js",
+    "server": "java -jar selenium-server-standalone-2.53.0.jar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrodoTheTrue/webdev-tasks-6.git"
+  },
+  "keywords": [
+    "yandex",
+    "webdev"
+  ],
+  "author": "Fedor Isakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrodoTheTrue/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/FrodoTheTrue/webdev-tasks-6#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gemini": "^3.0.2",
+    "wdio-mocha-framework": "^0.2.12"
+  },
+  "dependencies": {
+    "webdriverio": "^4.0.5"
+  }
+}
