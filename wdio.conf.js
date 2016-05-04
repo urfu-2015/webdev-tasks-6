@@ -1,4 +1,3 @@
-
 exports.config = {
     
     //
@@ -9,10 +8,9 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    // user: process.env.username,
-    // key: process.env.bf86a341-555d-41ca-8d52-c2277398554a,
-    user: USERNAME,
-    key: USERKEY,
+    user: 'v-sam',
+    key: '453ee56b-b7ea-441b-8ed2-806b79538a15',
+    
     
     //
     // ==================
@@ -24,7 +22,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        'test/test.js'
+        './test/test.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -46,7 +44,18 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
+    maxInstances: 10,
+    //
+    // If you have trouble getting all important capabilities together, check out the
+    // Sauce Labs platform configurator - a great tool to configure your capabilities:
+    // https://docs.saucelabs.com/reference/platforms-configurator
+    //
     capabilities: [{
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instance available you can make sure that not more than
+        // 5 instance gets started at a time.
+        maxInstances: 5,
+        //
         browserName: 'firefox'
     }],
     //
@@ -61,7 +70,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'result',
+    logLevel: 'silent',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -116,10 +125,13 @@ exports.config = {
     framework: 'mocha',
     //
     // Test reporter for stdout.
-    // The following are supported: dot (default), spec, and xunit
+    // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['dot'],
-    
+    reporters: ['junit'],
+
+    reporterOptions: {
+        outputDir: './'
+    },
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -130,7 +142,7 @@ exports.config = {
     // =====
     // Hooks
     // =====
-    // WedriverIO provides several hooks you can use to interfere with the test process in order to enhance
+    // WebdriverIO provides several hooks you can use to interfere with the test process in order to enhance
     // it and to build services around it. You can either apply a single function or an array of
     // methods to it. If one of them returns with a promise, WebdriverIO will wait until that promise got
     // resolved to continue.
