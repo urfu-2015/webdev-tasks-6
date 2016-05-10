@@ -1,0 +1,12 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "main": "test/specs/test.js",
+  "devDependencies": {
+    "wdio-mocha-framework": "^0.2.13"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "webdriverio": "^4.0.7"
+  }
+}
