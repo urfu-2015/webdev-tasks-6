@@ -6,9 +6,11 @@ const gameUrl = 'http://panicky-car.surge.sh/';
 
 describe('Test for card game', () => {
 
-    it('should not show cards when game starts', () => {
-        browser.url(gameUrl);
+    beforeEach( () => {
+        browser.url(gameUrl));
+    });
 
+    it('should not show cards when game starts', () => {
         browser.element('label[for="c-1-0"]')
             .getCssProperty('visibility').value.should.equal('hidden');
         browser.element('label[for="c-2-0"]')
@@ -24,16 +26,12 @@ describe('Test for card game', () => {
     });
 
     it('card should be visibled when click on it', () => {
-        browser.url(gameUrl);
-
         browser.click('label[for="c-0-0"]');
         browser.element('label[for="c-0-0"]')
             .getCssProperty('visibility').value.should.equal('visible');
     });
 
     it('cards should are visible when there are the same content', () => {
-        browser.url(gameUrl);
-
         browser.click('label[for="heart"]');
         browser.click('label[for="c-0-0"]');
         
@@ -41,8 +39,6 @@ describe('Test for card game', () => {
     });
 
     it('correctly pair should be showed when next choice is wrong', () => {
-        browser.url(gameUrl);
-
         browser.click('label[for="heart"]');
         browser.click('label[for="c-0-0"]');
         browser.click('label[for="c-0-2"]');
@@ -53,8 +49,6 @@ describe('Test for card game', () => {
     });
 
     it('win label should be showed when there are 3 right pair', () => {
-        browser.url(gameUrl);
-
         browser.element('<a>').getCssProperty('opacity').value.should.equal(0);
 
         browser.click('label[for="heart"]');
