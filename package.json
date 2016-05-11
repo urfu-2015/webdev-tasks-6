@@ -1,0 +1,30 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "Тестирование решений задания про карты с DUMP",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anna-Smith/webdev-tasks-6.git"
+  },
+  "keywords": [
+    "task6",
+    "yandex",
+    "cards"
+  ],
+  "author": "Anna-Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anna-Smith/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/Anna-Smith/webdev-tasks-6#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "wdio-mocha-framework": "^0.2.13",
+    "webdriverio": "^4.0.7"
+  }
+}
