@@ -172,7 +172,7 @@ exports.config = {
     // onComplete: function(exitCode) {
     // }
     host: 'ondemand.saucelabs.com',
-    user: 'tester228',
-    key: 'fc3f4ce7-3d52-482d-ad7e-d92cc2557f33',
+    user: 'Ivanov228',
+    key: '321b97fb-5941-4607-b580-fc66f005cdde',
     timeout: 100000000
 };
