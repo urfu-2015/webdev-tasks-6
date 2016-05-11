@@ -1,0 +1,6 @@
+.git
+.idea
+node_modules
+npm-debug.log
+webdriverio.saucelabs.cmd
+errorShots
