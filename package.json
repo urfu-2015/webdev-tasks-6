@@ -1,0 +1,19 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "./node_modules/.bin/wdio",
+    "test": "wdio saucelabs.conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "should": "^8.3.1",
+    "wdio-mocha-framework": "^0.2.12",
+    "webdriverio": "^4.0.7"
+  }
+}
