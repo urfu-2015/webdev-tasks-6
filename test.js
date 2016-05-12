@@ -1,4 +1,4 @@
-var should = require('chai').should();
+require('chai').should();
 var responseTime = 800;
 var firstCard = 'label[for="c-0-0"]';
 var secondCard = 'label[for="c-0-1"]';
@@ -42,6 +42,7 @@ describe('Card game', function() {
         browser.getCssProperty(secondCard, 'visibility').value.should.be.equal('visible');
         browser.getCssProperty(firstCardWhenFirstIsSelected, 'visibility').value.should.be.equal('hidden');
         browser.getCssProperty(secondCardWhenFirstIsSelected, 'visibility').value.should.be.equal('hidden');
+        browser.isSelected('#heart').should.be.false;
     });
 
     it('should not hide 2 same cards', function () {
