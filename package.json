@@ -1,0 +1,26 @@
+{
+  "name": "webdev-tasks-6",
+  "version": "1.0.0",
+  "description": "Недавно прошла конференция DUMP-2016 и для участников конференции мы придумали\r заковыристую задачу – создании карточной игры для тренировки памяти.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "dotenv": "^2.0.0",
+    "wdio-mocha-framework": "^0.2.13",
+    "wdio-sauce-service": "^0.2.2",
+    "webdriverio": "^4.0.7"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valeriyan/webdev-tasks-6.git"
+  },
+  "author": "Valeriyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Valeriyan/webdev-tasks-6/issues"
+  },
+  "homepage": "https://github.com/Valeriyan/webdev-tasks-6#readme"
+}
