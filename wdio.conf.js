@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 exports.config = {
 
-    user: 'valeriyan13',
-    key: '4a3cdbe7-ca39-430d-83e9-3e19f6ddb2b6',
+    user: process.env.SAUSE_USER,
+    key: process.env.SAUSE_KEY,
     //
     // ==================
     // Specify Test Files
@@ -127,7 +129,8 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        ui: 'bdd'
+        ui: 'bdd',
+        timeout: 15000
     },
     //
     // =====

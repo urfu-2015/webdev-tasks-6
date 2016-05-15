@@ -32,7 +32,7 @@ describe('Card game test', () => {
     });
 
     it('Should hide cards after few sec', () => {
-        browser.pause(1500);
+        browser.pause(1200);
         const firstSelector = getSelector(0, 0);
         const secondSelector = getSelector(0, 3);
 
@@ -53,7 +53,7 @@ describe('Card game test', () => {
 
         browser.click(firstSelector);
         browser.click(secondSelector);
-        browser.pause(1500);
+        browser.pause(1200);
 
         assert.equal(getCardOpacity(firstSelector), 0);
     });
@@ -64,13 +64,23 @@ describe('Card game test', () => {
 
         browser.click(firstSelector);
         browser.click(secondSelector);
-        browser.pause(1500);
+        browser.pause(500);
 
         assert.equal(getCardOpacity(firstSelector), 1);
         assert.equal(getCardOpacity(getSelector(0, 4)), 1);
     });
 
-    it('Should show message after win', () => {
+    it('Should show correct chosen pair after picking incorrect pair', () => {
+        browser.click(getSelector(0, 0));
+        browser.click(getSelector('heart'));
+        browser.click(getSelector(0, 1));
+        browser.click(getSelector(2, 5));
+        browser.pause(1200);
+
+        assert.equal(getCardOpacity(getSelector(0, 0)), 1);
+    });
+
+    it('Should show message after winning', () => {
         browser.click(getSelector(0, 0));
         browser.click(getSelector('heart'));
         browser.click(getSelector(0, 1));
@@ -79,5 +89,19 @@ describe('Card game test', () => {
         browser.click(getSelector('diamond'));
 
         assert.equal(browser.element('a').getCssProperty('opacity').value, 1);
+    });
+
+    it('Should restart game after clicking at message', () => {
+        browser.click(getSelector(0, 0));
+        browser.click(getSelector('heart'));
+        browser.click(getSelector(0, 1));
+        browser.click(getSelector('club'));
+        browser.click(getSelector(0, 2));
+        browser.click(getSelector('diamond'));
+        browser.click('a');
+        browser.pause(1500);
+
+        assert.equal(getCardOpacity(getSelector(0, 0)), 0);
+        assert.equal(getCardOpacity(getSelector(0, 3)), 0);
     });
 });
