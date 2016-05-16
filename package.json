@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "lint": "jscs .",
-    "start": "./node_modules/.bin/wdio",
+    "start": "username=vvladimirova accessKey=6c624950-580d-4b06-aac2-e4ce20be8b3e ./node_modules/.bin/wdio",
     "gemini-test": "./node_modules/.bin/gemini test gemini-test.js"
   },
   "dependencies": {

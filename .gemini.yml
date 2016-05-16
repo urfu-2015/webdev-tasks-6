@@ -4,9 +4,6 @@ gridUrl: http://ondemand.saucelabs.com/wd/hub
 screenshotsDir: './screens'
 
 browsers:
-  firefox:
-    desiredCapabilities:
-      browserName: firefox
 
   chrome:
     desiredCapabilities:

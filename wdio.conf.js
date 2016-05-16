@@ -1,7 +1,7 @@
 exports.config = {
 
-    user: 'vvladimirova',
-    key: '6c624950-580d-4b06-aac2-e4ce20be8b3e',
+    user: process.env.username,
+    key: process.env.accessKey,
 
     specs: [
         'test.js'
