@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "scripts": {
+        "test": "./node_modules/.bin/wdio ./wdio.conf.js"
+    },
+    "dependencies": {
+        "stylelint": "2.0.0"
+    },
+    "devDependencies": {
+        "selenium-standalone": "^5.1.0",
+        "wdio-mocha-framework": "^0.2.13",
+        "wdio-sauce-service": "^0.2.2",
+        "webdriverio": "^4.0.7"
+    }
+}
